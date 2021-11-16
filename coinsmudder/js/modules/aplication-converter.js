@@ -1,4 +1,4 @@
-import Modal from "./modal.js";
+import initModal from "./modal.js";
 
 export default function initConverter() {
   const valorInputEl = document.querySelector("[data-js='valorInput']");
@@ -28,8 +28,7 @@ export default function initConverter() {
         throw new Error();
       }
     } catch (err) {
-      const modal = new Modal("[data-js='modal']", "[data-js='modal-box']", "[data-js='closeModal']", "active");
-      modal.init();
+      initModal();
     }
   }
   getFetchApi();

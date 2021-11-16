@@ -1,0 +1,33 @@
+:root {
+  --cor1: #f0e3ca;
+  --cor2: #ff8303;
+  --cor2-hover: #ec7905;
+  --cor3: #a35709;
+  --cor4: #1b1a17;
+  --cor5: #f5f4f4;
+  --cor6: #100F0F;
+  --fonteDestaque: "Montserrat", sans-serif;
+  --fontePadrao: "Roboto", sans-serif;
+}
+.darked *{
+  transition: background .2s ease-in-out;
+}
+.darked body {
+  background: var(--cor6);
+  
+}
+.darked .tittle {
+  color: var(--cor5);
+}
+.darked .sub-title {
+  color: var(--cor5);
+}
+.darked .conversor-box {
+  background: var(--cor4);
+  color: var(--cor5);
+  border: 1px solid var(--cor2);
+}
+.darked .resultado-box {
+  background: var(--cor4);
+  color: var(--cor5);
+}
