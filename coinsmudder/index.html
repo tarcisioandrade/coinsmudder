@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CoinsMudder</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="manifest" href="favicon/site.webmanifest">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <script type="module" src="./js/script.js" async></script>
+    <script src="js/modules/maskValue.js" async></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="container logo-box">
+        <div class="logo">
+          <a href="index.html"><img src="svg/logo.svg" alt=""></a>
+        </div>
+        <label class="darkmode">
+          <input type="checkbox" data-js="switch-mode">
+          <span class="check"></span>
+        </label>
+      </div>
+    </header>
+
+    <main>
+      <div class="container ">
+        <h1 class="tittle">Conversor de Moedas</h1>
+
+        <div class="conversor-box">
+          <section action="" id="formularioDeConversao">
+            <p class="cotacao"><strong>Cotação:</strong><span class="dataCotacao" data-js="date"></span></p>
+
+            <div class="containerFormulario">
+
+              <div class="form-grupo">
+                <label for="valor">Valor</label>
+                <input type="text" name="" id="valor" class="valorInserido" data-js="valorInput" onkeyup="k(this);"/>
+              </div>
+
+              <div class="form-grupo">
+                <label for="moeda-one">Converter de</label>
+                <select name="moeda-one" id="moeda-one" form="formularioDeConversao" class="form-select" data-js="selectOne">
+                  <option value="USD">USD</option>
+                </select>
+              </div>
+
+              <div class="swap-box">
+                <a href="#"><img src="svg/swap-icon.svg" alt="swap" data-js='swap'></a>
+              </div>
+
+              <div class="form-grupo">
+                <label for="moeda-two">Para</label>
+                <select name="moeda-two" id="moeda-two" form="formularioDeConversao" class="form-select" data-js="selectTwo">
+                   <option value="BRL">BRL</option>
+                </select>
+              </div>
+
+              <div class="boxBtnConverter form-grupo">
+                <input type="button" value="CONVERTER" class="btnConverter" data-js="btn">
+              </div>
+
+              <!-- MODAL DE ERRO -->
+              <section class="modal-container" data-js='modal'>
+                <div class="modal" data-js="modal-box">
+                  <span class="closeModal" data-js='closeModal'>X</span>
+                  <span class="ops">OPS!</span>
+                  <p class="textErro">Infezlimente não temos essa combinação no nosso banco de dados</p>
+                </div>
+              </section>
+            </div>
+          </section>
+        </div>
+
+        <h2 class="sub-title">Resultado</h2>
+        <div class="resultado-box">
+            <div class="resultado">
+              <p class="valorConvertido" data-js="valueConverted"></p>
+              <div class="taxa">
+                <p class="taxa-title">Taxa</p>
+                <p class="valorMoeda" data-js="valorMoedaOne"></p>
+              </div>
+            </div>
+          </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <p>&copy; CoinsMudder - 2021</p>
+    </footer>
+  </body>
+</html>
