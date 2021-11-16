@@ -1,3 +1,5 @@
+@import "./darkmode.css";
+
 :root {
   --cor1: #f0e3ca;
   --cor2: #ff8303;
@@ -5,6 +7,7 @@
   --cor3: #a35709;
   --cor4: #1b1a17;
   --cor5: #f5f4f4;
+  --cor6: #100F0F;
   --fonteDestaque: "Montserrat", sans-serif;
   --fontePadrao: "Roboto", sans-serif;
 }
@@ -33,6 +36,54 @@ img {
   padding: 1rem 0;
   margin-bottom: 4rem;
   background: var(--cor2);
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+}
+
+
+/* CHECKBOX DARK-MODE */
+.darkmode {
+  margin-left: auto;
+}
+input[type="checkbox"] {
+  appearance: none;
+  visibility: hidden;
+  display: none;
+}
+.check {
+  display: block;
+  height: 20px;
+  width: 40px;
+  background: #ffffff;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: ease-in .3s;
+  overflow: hidden;
+  position: relative;
+}
+/* input[type="checkbox"]:checked ~ .check{
+  background: white;
+  box-shadow: 0 0 0 12000px #0a0a0a;
+} */
+.check::before {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 16px;
+  width: 16px;
+  background: var(--cor6);
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: .5s;
+}
+input[type="checkbox"]:checked ~ .check::before {
+  background: var(--cor2);
+  position: absolute;
+  transform: translateX(20px);
 }
 
 /* FORM */
